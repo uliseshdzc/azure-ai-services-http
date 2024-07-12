@@ -1,0 +1,68 @@
+@translatorUrl = https://api.cognitive.microsofttranslator.com/
+
+### Get available languages
+GET {{translatorUrl}}/languages?api-version=3.0
+
+### Translation
+POST {{translatorUrl}}/translate?api-version=3.0&from=en&to=fr&to=pt&to=es HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{apiKey}}
+Ocp-Apim-Subscription-Region: {{region}}
+
+[
+    {
+        "text": "Hello. I would like to talk to you."
+    }
+]
+
+### Transliterate
+POST {{translatorUrl}}/transliterate?api-version=3.0&language=ru&fromScript=Cyrl&toScript=Latn HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{apiKey}}
+Ocp-Apim-Subscription-Region: {{region}}
+
+[
+    {"Text":"привет"},
+    {"Text":"Спасибо"}
+]
+
+### Detect
+POST {{translatorUrl}}/detect?api-version=3.0 HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{apiKey}}
+Ocp-Apim-Subscription-Region: {{region}}
+
+[
+    {"Text":"Eey, bix a beel? bix a k'aaba?"},
+    {"Text":"Привет, как есть, как те ламы"}
+]
+
+### Break sentence
+POST {{translatorUrl}}/breaksentence?api-version=3.0 HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{apiKey}}
+Ocp-Apim-Subscription-Region: {{region}}
+
+[
+    {"Text":"Heute ist ein sehr schöner Tag. Es ist sehr sonnig und die Temperatur ist angenehm."}
+]
+
+### Dictionary lookup
+POST {{translatorUrl}}/dictionary/lookup?api-version=3.0&from=en&to=es HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{apiKey}}
+Ocp-Apim-Subscription-Region: {{region}}
+
+[
+    {"Text": "seesaw"}
+]
+
+### Dictionary examples
+POST {{translatorUrl}}/dictionary/examples?api-version=3.0&from=en&to=es HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{apiKey}}
+Ocp-Apim-Subscription-Region: {{region}}
+
+[
+    {"Text": "seesaw", "Translation": "balancín"}
+]
