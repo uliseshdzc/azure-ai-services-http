@@ -14,7 +14,7 @@ This is a collection of HTTP requests for the Azure AI services. I gathered them
   - Azure AI Content Moderator
   - Azure AI Personalizer
 
-They are separated in `.rest` files which follow the [RFC2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html) standard.
+They are separated in `.http` files which follow the [RFC2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html) standard.
 
 ## How to prepare the environment?
 I used [Visual Studio Code](https://code.visualstudio.com/) and the extension [REST Client](https://github.com/Huachao/vscode-restclient). To run the requests, both must be installed in your machine.
